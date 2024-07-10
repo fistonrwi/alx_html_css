@@ -1,0 +1,117 @@
+/* Reset CSS styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ff6f61;
+    --background-color: #1a1a1a;
+    --font-family: 'bold, sans-serif font';
+    --overlay-color: rgba(0, 0, 0, 0.5);
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    background-image: url("./assets/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 24cm; */
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+    list-style: none;
+    margin-right: 25px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    top: 20px;
+    align-items: center;
+    padding: 100px 0 300px 0;
+    position: relative;
+}
+
+.logo img {
+    max-width: 150px;
+    padding-bottom: 100px;
+    margin-right: 17cm;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Hero Content Styles */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    margin-bottom: 50px;
+}
+
+.hero-description {
+    font-size: 1em;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Button Styles */
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.cta-button:hover {
+    background-color: #ff8c85;
+}
