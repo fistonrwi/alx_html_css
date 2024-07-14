@@ -204,8 +204,9 @@ body {
 /* Media Query for smaller screens */
 @media (max-width: 480px) {
     .hero-content {
-        margin-top: 150px;
+        padding-top: 250px;
         margin-top: 500px;
+        
     }
 
     .nav-links {
