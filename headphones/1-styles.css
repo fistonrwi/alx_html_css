@@ -1,0 +1,358 @@
+/* Reset CSS styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #ffffff;
+    --color: #000000;
+    --secondary-color: #ff6f61;
+    --link-hover-color: #FF6565;
+    --font-family: 'bold, sans-serif font';
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    background-image: url("./assets/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 130vh;
+    color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.logo img {
+    max-width: 150px;
+    transform: translate(-130%);
+}
+
+.nav-toggle {
+    display: none;
+    left: 30px;
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.nav-icon .menu-icon {
+    display: inline;
+}
+
+.nav-icon .close-icon {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    color: var(--link-hover-color);
+}
+
+/* Hero Content Styles */
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.hero-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    margin-bottom: 50px;
+}
+
+.hero-description {
+    font-size: 1em;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Button Styles */
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.cta-button:hover {
+    background-color: #e72b21;
+    opacity: 0.9;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        max-width: 120px;
+        transform: translate(100%);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+    }
+
+    .nav-links a {
+        font-size: 1.2em;
+    }
+
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+
+    .hero-description {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .nav-toggle:checked + .nav-icon .menu-icon {
+        display: none;
+    }
+
+    .nav-toggle:checked + .nav-icon .close-icon {
+        display: inline;
+        padding-right: 100px;
+
+    }
+
+    .nav-toggle:checked ~ nav .nav-links {
+        display: flex;
+    }
+
+    .nav-icon {
+        display: inline-block;
+    }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+    .hero-content {
+        margin-top: 150px;
+        margin-top: 500px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: transparent;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-toggle:checked ~ nav .nav-links {
+        display: flex;
+    }
+}
+
+/* What we do section styles */
+.what-we-do {
+    padding: 60px 20px;
+    color: var(--color);
+
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1em;
+    color: #131212;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service {
+    flex: 1 1 150px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 50px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 0.9em;
+    color: #131212;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-icon {
+        display: block;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-toggle:checked ~ .nav-icon .menu-icon {
+        display: none;
+    }
+
+    .nav-toggle:checked ~ .nav-icon .close-icon {
+        display: inline;
+    }
+
+    .hero-content {
+        margin-top: 200px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 0.9em;
+    }
+
+    .service h3 {
+        font-size: 1em;
+    }
+
+    .service p {
+        font-size: 0.8em;
+    }
+
+    .service {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+}
